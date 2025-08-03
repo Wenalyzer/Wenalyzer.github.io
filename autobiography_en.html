@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wen-Kai Zhong - Personal Statement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* A4 Print Styles */
+        @media print {
+            body {
+                font-size: 12px;
+                line-height: 1.4;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 10px;
+            }
+            
+            .autobiography-content {
+                padding: 12px;
+            }
+            
+            .section {
+                margin-bottom: 15px;
+            }
+            
+            .paragraph {
+                margin-bottom: 12px;
+                padding: 15px;
+            }
+        }
+        
+        /* Fusion Style Autobiography */
+        .fusion-autobiography {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Main Content Area */
+        .autobiography-content {
+            padding: 40px;
+        }
+        
+        /* Section Styles */
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+            transition: width 0.6s ease;
+        }
+        
+        .section:hover .section-title::before {
+            width: 100%;
+        }
+        
+        /* Paragraph Styles */
+        .paragraph {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .paragraph:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        .paragraph:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .autobiography-content {
+                padding: 25px;
+            }
+            
+            .paragraph {
+                padding: 20px;
+            }
+        }
+        
+        /* Entrance Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fusion-autobiography">
+            <!-- Main Content -->
+            <div class="autobiography-content">
+                <!-- Background and Career Transition -->
+                <div class="section">
+                    <h2 class="section-title">Background and Career Transition</h2>
+                    <div class="paragraph">
+                        After earning my Communication Engineering degree from National Central University, I explored opportunities in the language field, leveraging my language abilities. I successfully passed the first round of the Graduate Program in Translation and Interpretation at National Taiwan University and earned language certifications including TOEIC 980 and JLPT N2. I then worked as a project assistant for the Ministry of Education's Bilingual Digital Learning Program at Yuan Ze University, coordinating online learning activities for 40 university tutors and 140 elementary school students. This role also involved working with many international students, which helped me develop skills in project management, cross-team collaboration, and cross-cultural communication.<br><br>
+                        During my time at Yuan Ze University, I used AI tools to develop a small program that solved office receipt printing format issues, saving my colleagues significant time on repetitive tasks. This experience showed me how AI tools can dramatically boost productivity for developers with technical backgrounds, reducing the time needed for research and trial-and-error. I started noticing how AI was transforming software development and realized the field needed engineers who could leverage new tools while maintaining strong technical foundations. Considering my communication engineering background, language abilities, and growing interest in this rapidly evolving field, I decided to transition into AI/ML. To support this transition, I invested in an RTX 4070Ti Super to gain hands-on experience with various CUDA-enabled open-source AI projects on GitHub, such as ComfyUI and RVC.
+                    </div>
+                </div>
+                
+                <!-- Systematic Learning Journey -->
+                <div class="section">
+                    <h2 class="section-title">Systematic Learning Journey</h2>
+                    <div class="paragraph">
+                        To make this career transition, I enrolled in TibaMe's comprehensive "AI Intelligent Application Development Program," building my technical skills systematically from Python fundamentals. The curriculum covered deep learning frameworks (PyTorch, TensorFlow), natural language processing, computer vision, and cloud deployment technologies (Docker, GCP/AWS).<br><br>
+                        Throughout this learning process, I focused on combining theory with practice. Beyond absorbing course content, I leveraged my language skills to study additional English resources such as Hugging Face's LLM Course and "LLM from Scratch" on GitHub. This self-directed learning helped me stay current with the latest technical developments and implementation details. The project-oriented course design also enabled me to immediately apply what I learned to real problems, which perfectly matched my hands-on learning style.<br><br>
+                        Through this comprehensive learning journey, I not only built a solid foundation in AI/ML theory but, more importantly, developed the ability to transform concepts into practical solutions.
+                    </div>
+                </div>
+                
+                <!-- Project Implementation and Technical Skills -->
+                <div class="section">
+                    <h2 class="section-title">Project Implementation and Technical Skills</h2>
+                    <div class="paragraph">
+                        In the course's drug image recognition project, I was responsible for the complete pipeline from DETR-based model training to deployment, participating in everything from data preparation to final production release. For model design, I implemented 5-fold cross-validation to ensure training stability and avoid the randomness of single training runs.<br><br>
+                        Container size optimization presented significant challenges. The original CUDA training environment was extremely large, and even after switching to PyTorch CPU version, it was still 4.25GB. To further reduce the deployment container size, I converted the model to ONNX format and replaced PyTorch and related heavy packages with ONNX Runtime and Pillow, ultimately reducing the container to 862MB. This process not only reduced model loading time from 1.6 seconds to 0.47 seconds but also significantly lowered deployment costs. I developed an HTTP API using FastAPI that allowed our team's LINE Bot to call the image recognition functionality, and set up GitHub Actions for automated deployment to GCP Cloud Run.<br><br>
+                        Beyond cloud deployment, I also built a personal server environment as a backup deployment platform for team projects. Using Cloudflare Tunnel, I established secure connections without opening any ports, following Zero Trust security principles. This environment not only provided a more cost-effective alternative with response times under 1 second, but also integrated GitHub self-hosted runners to support CI/CD workflows. Through these project experiences, I gained deep understanding of the complete engineering process from model development to production deployment, and developed practical skills in system optimization under resource constraints.
+                    </div>
+                </div>
+                
+                <!-- Future Outlook -->
+                <div class="section">
+                    <h2 class="section-title">Future Outlook</h2>
+                    <div class="paragraph">
+                        Through this learning and hands-on experience, I've learned that AI technology's value isn't just in the algorithms themselves, but in how effectively they integrate into real-world applications. My technical background enables me to understand the importance of system architecture, while my project experience has developed an engineering mindset that starts from user needs and considers cost-effectiveness.<br><br>
+                        In the fast-moving AI field, continuously learning and adapting to new technologies is essential. I've established a habit of self-directed learning through English resources, enabling me to stay current with international technical developments. I also have complete experience from proof-of-concept to production deployment.<br><br>
+                        I believe I can add value in AI-related positions, whether in model development, system optimization, or cross-team collaboration. I'm excited to apply these skills and experiences to real industry applications, delivering concrete technical value.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

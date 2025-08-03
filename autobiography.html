@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍾文凱自傳</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* A4 列印樣式 */
+        @media print {
+            body {
+                font-size: 12px;
+                line-height: 1.4;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 10px;
+            }
+            
+            .autobiography-header {
+                padding: 10px;
+            }
+            
+            .autobiography-content {
+                padding: 12px;
+            }
+            
+            .section {
+                margin-bottom: 15px;
+            }
+            
+            .paragraph {
+                margin-bottom: 12px;
+                padding: 15px;
+            }
+        }
+        
+        /* 融合風格自傳 */
+        .fusion-autobiography {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* 頂部個人資訊 */
+        .autobiography-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .autobiography-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* 主要內容區域 */
+        .autobiography-content {
+            padding: 40px;
+        }
+        
+        /* 區塊樣式 */
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+            transition: width 0.6s ease;
+        }
+        
+        .section:hover .section-title::before {
+            width: 100%;
+        }
+        
+        /* 段落樣式 */
+        .paragraph {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .paragraph:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        .paragraph:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .autobiography-header {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .autobiography-content {
+                padding: 25px;
+            }
+            
+            .paragraph {
+                padding: 20px;
+            }
+        }
+        
+        /* 入場動畫 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fusion-autobiography">
+            
+            <!-- 主要內容 -->
+            <div class="autobiography-content">
+                <!-- 背景與轉換契機 -->
+                <div class="section">
+                    <h2 class="section-title">背景與轉換契機</h2>
+                    <div class="paragraph">
+                        取得國立中央大學通訊工程學位後，我嘗試發揮自身的語言能力，朝語言專業發展，通過臺大翻譯碩士學程初試並取得TOEIC 980、JLPT N2等語言認證。之後在元智大學教育部雙語數位學伴計畫中擔任助理，負責協調40位大學生與140位小學生的線上學習，期間也接觸許多外籍學生，累積了專案管理、跨團隊溝通以及跨文化交流的實務經驗。<br><br>
+                        在元智大學工作期間，我使用AI工具協助設計了一個小程式來解決辦公室收據列印的格式問題，為同仁省下不少重複作業時間。這次經驗讓我發現AI工具能夠大幅提升有技術基礎的人的開發效率，減少搜尋和試錯的時間。我開始關注AI技術對軟體開發帶來的改變，認為這個領域需要能夠善用新工具、同時具備扎實技術基礎的工程人才。結合我的通訊工程背景、語言能力，以及對這個快速發展領域的興趣，我開始規劃轉入AI/ML領域，並購買了RTX 4070Ti Super來實際體驗GitHub上各種需要CUDA支援的開源AI專案，如ComfyUI、RVC等工具。
+                    </div>
+                </div>
+                
+                <!-- 系統性學習歷程 -->
+                <div class="section">
+                    <h2 class="section-title">系統性學習歷程</h2>
+                    <div class="paragraph">
+                        為了實現這個轉換目標，我選擇了緯育TibaMe的「AI 智慧應用開發實戰養成班」完整課程體系，從Python基礎開始系統性地建立技術能力。課程涵蓋了深度學習框架（PyTorch、TensorFlow）、自然語言處理、電腦視覺，以及雲端部署技術（Docker、GCP/AWS）。<br><br>
+                        這段學習過程中，我特別重視理論與實作的結合。除了吸收課程內容，我也利用語言能力的優勢，學習Hugging Face的LLM Course和GitHub上的「LLM from Scratch」等英文資源，這種自學能力讓我能夠掌握最新的技術發展和實作細節。此外，課程的專案導向設計讓我能夠立即將所學應用到實際問題上，這種學習方式非常符合我實作導向的學習風格。<br><br>
+                        通過這個完整的學習歷程，我不僅建立了AI/ML的理論基礎，更重要的是培養了將概念轉化為實際解決方案的能力。
+                    </div>
+                </div>
+                
+                <!-- 專案實作與技術能力 -->
+                <div class="section">
+                    <h2 class="section-title">專案實作與技術能力</h2>
+                    <div class="paragraph">
+                        在課程的藥品影像辨識專案中，我負責基於DETR架構的模型訓練與完整部署流程，從資料準備到最終上線都親自參與。在模型設計上，我採用5-fold交叉驗證來確保訓練結果的穩定性，避免單次訓練結果的偶然性。<br><br>
+                        在系統優化方面，我面臨了容器大小的挑戰。原本包含CUDA的訓練環境非常龐大，即使改用PyTorch CPU版本後仍有4.25GB。為了進一步縮減部署容器的大小，我將模型轉換為ONNX格式，並用ONNX Runtime搭配Pillow取代PyTorch及其相關的大型套件，最終將容器縮減至862MB。這個過程不僅讓模型載入時間從1.6秒縮短至0.47秒，也大幅降低了部署成本。我用FastAPI開發HTTP API，讓團隊的LINE Bot能夠呼叫影像辨識功能，並設定GitHub Actions自動部署到GCP Cloud Run。<br><br>
+                        除了雲端部署，我也建立了個人伺服器環境作為團隊專案的備用部署平台。透過Cloudflare Tunnel建立安全連線，無需開放任何連接埠就能讓外部服務存取，符合Zero Trust的安全理念。這個環境不僅提供了成本效益更高的替代方案，回應時間也能控制在1秒以內，同時整合了GitHub self-hosted runner來支援CI/CD流程。透過這些專案經驗，我深入了解從模型開發到生產環境部署的完整工程流程，也培養了在資源限制下進行系統優化的實務能力。
+                    </div>
+                </div>
+                
+                <!-- 未來展望 -->
+                <div class="section">
+                    <h2 class="section-title">未來展望</h2>
+                    <div class="paragraph">
+                        通過這段學習和實作的經歷，我深刻體認到AI技術的價值不僅在於演算法本身，更在於如何將其有效地整合到實際應用場景中。我的技術背景讓我能夠理解系統架構的重要性，而專案經驗則培養了我從使用者需求出發、考慮成本效益的工程思維。<br><br>
+                        在快速變化的AI領域中，持續學習和適應新技術是最重要的能力。我已經建立了透過英文資源自主學習的習慣，能夠跟上國際最新的技術發展，也具備了從概念驗證到生產部署的完整經驗。<br><br>
+                        我相信自己能夠在AI相關職位上發揮價值，不論是在模型開發、系統優化，還是跨團隊協作方面。我期待能夠將這些技能和經驗投入到實際的產業應用中，創造具體的技術價值。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
