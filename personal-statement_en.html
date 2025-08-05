@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wen-Kai Zhong - Personal Statement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* A4 Print Styles */
+        @media print {
+            body {
+                font-size: 12px;
+                line-height: 1.4;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 10px;
+            }
+            
+            .statement-header {
+                padding: 10px;
+            }
+            
+            .statement-content {
+                padding: 8px;
+            }
+            
+            .section {
+                margin-bottom: 8px;
+            }
+            
+            .section:first-child {
+                margin-top: 0;
+            }
+            
+            .section:last-child {
+                margin-bottom: 0;
+            }
+            
+            .section-title {
+                margin-bottom: 6px;
+                padding-bottom: 3px;
+            }
+            
+            .paragraph {
+                margin-bottom: 0;
+                padding: 10px;
+            }
+        }
+        
+        /* Fusion Style Personal Statement */
+        .fusion-personal-statement {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Header Section */
+        .statement-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .statement-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Main Content Area */
+        .statement-content {
+            padding: 20px;
+        }
+        
+        /* Section Styles */
+        .section {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .section:first-child {
+            margin-top: 0;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+            transition: width 0.6s ease;
+        }
+        
+        .section:hover .section-title::before {
+            width: 100%;
+        }
+        
+        /* Paragraph Styles */
+        .paragraph {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 0;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .paragraph:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        .paragraph:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .statement-header {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .statement-content {
+                padding: 25px;
+            }
+            
+            .paragraph {
+                padding: 20px;
+            }
+        }
+        
+        /* Entry Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fusion-personal-statement">
+            
+            <!-- Main Content -->
+            <div class="statement-content">
+                <!-- When Others Get Used to It -->
+                <div class="section">
+                    <h2 class="section-title">When Others Get Used to It</h2>
+                    <div class="paragraph">
+                        Two years ago, when I worked at Yuan Ze University, my colleagues often complained about receipt printing issues - the layout would get messed up and everyone just got used to fixing it manually. But I kept thinking: why can't we solve this recurring problem once and for all? Although I had programming experience, I still needed time to quickly learn about print formatting, which was new to me. So I decided to use AI tools to help with learning and coding, and within a day, I had a solution that saved the entire office from this annoying problem.<br><br>
+                        That's just who I am - when I see room for improvement in a system, I can't help but try to make it better. Same thing with computer hardware tuning. Even when everything works fine, I'll still spend time optimizing it. I once managed to reduce heat output by a third without losing any performance. For me, knowing a system could be better but not trying to improve it feels like choosing the long way when you know there's a shortcut.
+                    </div>
+                </div>
+                
+                <!-- Helping Others is Learning Too -->
+                <div class="section">
+                    <h2 class="section-title">Helping Others is Learning Too</h2>
+                    <div class="paragraph">
+                        This same pattern shows up when I'm learning new tech. During my AI course at TibaMe, my programming and system management background helped me pick things up quickly - I could even study ahead. Besides the course materials, I used my English skills to learn directly from sources like "LLM from Scratch" on GitHub and Hugging Face documentation. This way, I didn't have to wait for Chinese translations or worry about losing technical details in translation, so I could grasp new concepts faster. When classmates ran into environment setup issues, I'd try to help them out. In one TensorFlow class, the entire class hit installation problems, but I managed to figure out the solution by checking error messages and doing some research beforehand, which helped the instructor get the class back on track.
+                    </div>
+                </div>
+                
+                <!-- The Gap Between Working and Optimal -->
+                <div class="section">
+                    <h2 class="section-title">The Gap Between Working and Optimal</h2>
+                    <div class="paragraph">
+                        This problem-solving habit carried over to our team project at TibaMe. I was handling model training and deployment for a drug image recognition system. Once everything was running properly, most people would consider the job done. But when I saw our deployment container was 4.25GB, I started wondering: wouldn't this cost more and load slower in production? Can we make it smaller?<br><br>
+                        I tried different optimization approaches: converted the model to ONNX format, replaced heavy PyTorch dependencies with lighter alternatives, and eventually got the container down to 862MB while reducing loading time from 1.6 seconds to 0.47 seconds. I also built a complete CI/CD pipeline using GitHub Actions to auto-deploy to GCP Cloud Run, and even set up a personal server with Cloudflare Tunnel as a backup deployment option. Nobody asked me to do any of this optimization work, but when I see room for improvement, I just can't help myself - it's become a habit.
+                    </div>
+                </div>
+                
+                <!-- Connecting These Experiences -->
+                <div class="section">
+                    <h2 class="section-title">Connecting These Experiences</h2>
+                    <div class="paragraph">
+                        Looking back at all these experiences, I realize I've been doing the same thing over and over: spotting ways to make systems better, then actually doing something about it. Whether it's office printing problems, hardware optimization, classroom tech issues, or project deployment bottlenecks, my approach is always the same: understand the problem → find the root cause → fix it, rather than working around it or waiting for someone else to handle it.<br><br>
+                        I believe this kind of thinking becomes even more important in the AI era. Technology moves fast, new tools pop up constantly, but the real value lies in how effectively we can apply these technologies to solve actual problems. I'm confident that I can bring value to the tech field by combining my communication engineering background, language advantages for learning, and this continuous optimization mindset. It's not just about mastering how to use tools - it's about turning technology into real solutions.<br><br>
+                        I'd love the chance to discuss how this problem-solving approach could apply to real work situations. Thank you for taking the time to read my personal statement.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

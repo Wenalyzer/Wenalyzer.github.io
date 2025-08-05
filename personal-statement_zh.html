@@ -48,16 +48,29 @@
             }
             
             .autobiography-content {
-                padding: 12px;
+                padding: 8px;
             }
             
             .section {
-                margin-bottom: 15px;
+                margin-bottom: 8px;
+            }
+            
+            .section:first-child {
+                margin-top: 0;
+            }
+            
+            .section:last-child {
+                margin-bottom: 0;
+            }
+            
+            .section-title {
+                margin-bottom: 6px;
+                padding-bottom: 3px;
             }
             
             .paragraph {
-                margin-bottom: 12px;
-                padding: 15px;
+                margin-bottom: 0;
+                padding: 10px;
             }
         }
         
@@ -134,13 +147,17 @@
         
         /* 主要內容區域 */
         .autobiography-content {
-            padding: 40px;
+            padding: 20px;
         }
         
         /* 區塊樣式 */
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             position: relative;
+        }
+        
+        .section:first-child {
+            margin-top: 0;
         }
         
         .section:last-child {
@@ -151,8 +168,8 @@
             font-size: 1.5rem;
             font-weight: 600;
             color: #60a5fa;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
             border-bottom: 2px solid rgba(59, 130, 246, 0.3);
             position: relative;
             transition: all 0.3s ease;
@@ -177,8 +194,8 @@
         .paragraph {
             background: rgba(30, 41, 59, 0.5);
             border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 15px;
+            margin-bottom: 0;
             border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
             line-height: 1.8;
@@ -251,42 +268,39 @@
             
             <!-- 主要內容 -->
             <div class="autobiography-content">
-                <!-- 背景與轉換契機 -->
+                <!-- 當別人習慣時 -->
                 <div class="section">
-                    <h2 class="section-title">背景與轉換契機</h2>
+                    <h2 class="section-title">當別人習慣時</h2>
                     <div class="paragraph">
-                        取得國立中央大學通訊工程學位後，我嘗試發揮自身的語言能力，朝語言專業發展，通過臺大翻譯碩士學程初試並取得TOEIC 980、JLPT N2等語言認證。之後在元智大學教育部雙語數位學伴計畫中擔任助理，負責協調40位大學生與140位小學生的線上學習，期間也接觸許多外籍學生，累積了專案管理、跨團隊溝通以及跨文化交流的實務經驗。<br><br>
-                        在元智大學工作期間，我使用AI工具協助設計了一個小程式來解決辦公室收據列印的格式問題，為同仁省下不少重複作業時間。這次經驗讓我發現AI工具能夠大幅提升有技術基礎的人的開發效率，減少搜尋和試錯的時間。我開始關注AI技術對軟體開發帶來的改變，認為這個領域需要能夠善用新工具、同時具備扎實技術基礎的工程人才。結合我的通訊工程背景、語言能力，以及對這個快速發展領域的興趣，我開始規劃轉入AI/ML領域，並購買了RTX 4070Ti Super來實際體驗GitHub上各種需要CUDA支援的開源AI專案，如ComfyUI、RVC等工具。
+                        兩年前，我在元智大學工作時，同事們使用學校系統列印收據經常發生版面跑掉的問題，大家都已經習慣了手動調整。我卻想：這個重複性問題應該可以用程式解決。雖然我有程式設計背景，但要快速掌握沒學過的列印格式處理還是需要時間。因此，我想到使用AI工具輔助分析與coding，花了一天時間寫出解決方案，整個辦公室從此不用再為版面問題煩惱。<br><br>
+                        我就是這樣的人——看到系統有改善空間就想動手試試。調校電腦硬體時也是如此——明明能用，但我還是會花時間優化，最終在幾乎不損失性能的情況下讓發熱降低三分之一。對我來說，知道一個系統還有改善空間卻不去嘗試，就像明知道有更好的路徑卻選擇繞遠路一樣，總覺得哪裡不對勁。
                     </div>
                 </div>
                 
-                <!-- 系統性學習歷程 -->
+                <!-- 幫助他人也是學習 -->
                 <div class="section">
-                    <h2 class="section-title">系統性學習歷程</h2>
+                    <h2 class="section-title">幫助他人也是學習</h2>
                     <div class="paragraph">
-                        為了實現這個轉換目標，我選擇了緯育TibaMe的「AI 智慧應用開發實戰養成班」完整課程體系，從Python基礎開始系統性地建立技術能力。課程涵蓋了深度學習框架（PyTorch、TensorFlow）、自然語言處理、電腦視覺，以及雲端部署技術（Docker、GCP/AWS）。<br><br>
-                        這段學習過程中，我特別重視理論與實作的結合。除了吸收課程內容，我也利用語言能力的優勢，學習Hugging Face的LLM Course和GitHub上的「LLM from Scratch」等英文資源，這種自學能力讓我能夠掌握最新的技術發展和實作細節。此外，課程的專案導向設計讓我能夠立即將所學應用到實際問題上，這種學習方式非常符合我實作導向的學習風格。<br><br>
-                        通過這個完整的學習歷程，我不僅建立了AI/ML的理論基礎，更重要的是培養了將概念轉化為實際解決方案的能力。
+                        類似的情況在我學習新技術時也經常出現。在緯育TibaMe的AI課程中，由於有程式設計和系統管理的基礎，我通常能比較快進入狀況，甚至預習接下來的內容。除了課程內容，我也利用英語能力直接學習GitHub上的'LLM from Scratch'、Hugging Face官方文檔等第一手技術資源，不用等待中文版本或擔心翻譯後的技術細節失真，這讓我能更快掌握新技術的核心概念。當同學遇到環境配置問題時，我會試著幫忙解決；在TensorFlow課程上，全班都遇到安裝環境的問題，我透過觀察錯誤訊息和事前查資料，最後協助老師找到了解決方案，讓課堂得以順利進行。
                     </div>
                 </div>
                 
-                <!-- 專案實作與技術能力 -->
+                <!-- 能用與最佳的差距 -->
                 <div class="section">
-                    <h2 class="section-title">專案實作與技術能力</h2>
+                    <h2 class="section-title">能用與最佳的差距</h2>
                     <div class="paragraph">
-                        在課程的藥品影像辨識專案中，我負責基於DETR架構的模型訓練與完整部署流程，從資料準備到最終上線都親自參與。在模型設計上，我採用5-fold交叉驗證來確保訓練結果的穩定性，避免單次訓練結果的偶然性。<br><br>
-                        在系統優化方面，我面臨了容器大小的挑戰。原本包含CUDA的訓練環境非常龐大，即使改用PyTorch CPU版本後仍有4.25GB。為了進一步縮減部署容器的大小，我將模型轉換為ONNX格式，並用ONNX Runtime搭配Pillow取代PyTorch及其相關的大型套件，最終將容器縮減至862MB。這個過程不僅讓模型載入時間從1.6秒縮短至0.47秒，也大幅降低了部署成本。我用FastAPI開發HTTP API，讓團隊的LINE Bot能夠呼叫影像辨識功能，並設定GitHub Actions自動部署到GCP Cloud Run。<br><br>
-                        除了雲端部署，我也建立了個人伺服器環境作為團隊專案的備用部署平台。透過Cloudflare Tunnel建立安全連線，無需開放任何連接埠就能讓外部服務存取，符合Zero Trust的安全理念。這個環境不僅提供了成本效益更高的替代方案，回應時間也能控制在1秒以內，同時整合了GitHub self-hosted runner來支援CI/CD流程。透過這些專案經驗，我深入了解從模型開發到生產環境部署的完整工程流程，也培養了在資源限制下進行系統優化的實務能力。
+                        這種解決問題的習慣在TibaMe的團體專題中也延續著。在藥品影像辨識專案中，我負責模型訓練與部署，當系統能正常運作後，大部分人會認為任務完成了。但我看到部署容器有4.25GB這麼大，就開始想：這在生產環境會增加成本和載入時間，有沒有辦法更精簡？<br><br>
+                        我開始嘗試各種優化方法：將模型轉換為ONNX格式，用更輕量的套件替換PyTorch的大型相依套件，最終將容器縮減至862MB，載入時間也從1.6秒縮短到0.47秒。不僅如此，我還建立了完整的CI/CD流程，透過GitHub Actions自動部署到GCP Cloud Run，甚至架設個人伺服器搭配Cloudflare Tunnel作為備用部署方案。沒有人要求我做這些優化，但對我來說，看到系統還有改善空間就會想動手試試，這已經成為一種習慣。
                     </div>
                 </div>
                 
-                <!-- 未來展望 -->
+                <!-- 串起這些經驗 -->
                 <div class="section">
-                    <h2 class="section-title">未來展望</h2>
+                    <h2 class="section-title">串起這些經驗</h2>
                     <div class="paragraph">
-                        通過這段學習和實作的經歷，我深刻體認到AI技術的價值不僅在於演算法本身，更在於如何將其有效地整合到實際應用場景中。我的技術背景讓我能夠理解系統架構的重要性，而專案經驗則培養了我從使用者需求出發、考慮成本效益的工程思維。<br><br>
-                        在快速變化的AI領域中，持續學習和適應新技術是最重要的能力。我已經建立了透過英文資源自主學習的習慣，能夠跟上國際最新的技術發展，也具備了從概念驗證到生產部署的完整經驗。<br><br>
-                        我相信自己能夠在AI相關職位上發揮價值，不論是在模型開發、系統優化，還是跨團隊協作方面。我期待能夠將這些技能和經驗投入到實際的產業應用中，創造具體的技術價值。
+                        回顧這些經驗，我發現自己一直在做同一件事：發現系統的改善空間，然後動手讓它變得更好。無論是辦公室的列印問題、硬體優化、課堂上的技術障礙，還是專案部署的效能瓶頸，我習慣的模式都是：理解問題→找到根本原因→動手解決，而不是繞過它或等別人處理。<br><br>
+                        我相信在AI時代這種思維會更加重要。技術高速演進，新工具層出不窮，但真正的價值在於如何將這些技術有效地應用到實際問題上。我相信自己能夠運用通訊工程的系統思維、語言優勢帶來的學習能力，以及這種持續優化的工程師思維，在技術領域中發揮價值。不只是掌握工具的使用方法，更重要的是將技術轉化為真正解決問題的方案。<br><br>
+                        期待有機會與您討論如何將這種解決問題的思維應用到實際工作中。感謝您撥冗閱讀我的自傳。
                     </div>
                 </div>
             </div>
